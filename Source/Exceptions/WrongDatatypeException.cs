@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace KeepCoding
+namespace KModkit
 {
     /// <summary>
     /// An exception thrown for when the wrong datatype is used. Written by Emik.

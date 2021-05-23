@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace KeepCoding
+namespace KModkit
 {
     /// <summary>
     /// Interface for Twitch Plays support. Written by Emik.

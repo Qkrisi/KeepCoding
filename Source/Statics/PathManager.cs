@@ -10,12 +10,10 @@ using UnityEngine;
 using UnityEngine.Video;
 using Debug = UnityEngine.Debug;
 using Object = UnityEngine.Object;
-using ModSourceEnum = KeepCoding.Game.ModSourceEnum;
+using ModSourceEnum = KModkit.Game.ModSourceEnum;
 
-namespace KeepCoding
+namespace KModkit
 {
-    extern alias core;
-
     /// <summary>
     /// Allows loading external information stored on the module. Do not use this code on the Editor. Written by Emik.
     /// </summary>
@@ -99,9 +97,9 @@ namespace KeepCoding
             if (IsCached(in current))
                 return GetCache<string>(in current);
 
-            string path = Game.ModManager.GetEnabledModPaths(ModSourceEnum.Local)
+            string path = Game.ModManager.GetEnabledModPaths(Game.ModSourceEnum.Local)
                               .FirstOrDefault(x => Directory.GetFiles(x, fileName).Any()) ??
-                          Game.ModManager.GetEnabledModPaths(ModSourceEnum.SteamWorkshop)
+                          Game.ModManager.GetEnabledModPaths(Game.ModSourceEnum.SteamWorkshop)
                               .FirstOrDefault(x => Directory.GetFiles(x, fileName).Any()) ??
                           GetDisabledPath(fileName) ?? throw new FileNotFoundException($"The file name {fileName} could not be found within your mods folder!");
 

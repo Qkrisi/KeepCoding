@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace KeepCoding
+namespace KModkit
 {
     /// <summary>
     /// An abstract type meant for the tuple data type for C# 4. Written by Emik.

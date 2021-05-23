@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 using static KMAudio;
 
-namespace KeepCoding
+namespace KModkit
 {
     /// <summary>
     /// KMFramework extension methods that makes it easier to assign multiple events to a variable in one statement. Written by Emik.

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace KeepCoding
+namespace KModkit
 {
     /// <summary>
     /// Stores numbers far larger than long or ulong by using arrays to store the values. Written by Emik.

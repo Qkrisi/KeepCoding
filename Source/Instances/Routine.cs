@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace KeepCoding
+namespace KModkit
 {
     /// <summary>
     /// Advanced coroutine handler. Written by Emik.

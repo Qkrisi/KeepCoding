@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace KeepCoding
+namespace KModkit
 {
     /// <summary>
     /// Mod bundle component. This is used to get information about the module at runtime, as this cannot be determined elsewhere. Written by Emik.

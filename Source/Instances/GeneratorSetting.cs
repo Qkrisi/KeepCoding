@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace KeepCoding
+namespace KModkit
 {
     /// <summary>
     /// Everything needed to generate a single bomb. Written by Emik.

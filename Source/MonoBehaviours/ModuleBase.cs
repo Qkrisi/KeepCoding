@@ -9,13 +9,13 @@ using UnityEngine.Networking;
 using static KMAudio;
 using static KMSoundOverride;
 
-namespace KeepCoding
+namespace KModkit
 {
     /// <summary>
     /// Base class for solvable and needy modded modules in Keep Talking and Nobody Explodes. Written by Emik.
     /// </summary>
     [RequireComponent(typeof(ModBundle))]
-    public abstract class ModuleScript : MonoBehaviour
+    public abstract class ModuleBase : MonoBehaviour
     {
         /// <value>
         /// Determines whether the module has been struck. Twitch Plays script will set this to false when a command is interrupted.
@@ -67,7 +67,7 @@ namespace KeepCoding
         /// </value>
         /// <exception cref="OperationCanceledException"></exception>
         /// <exception cref="FileNotFoundException"></exception>
-        public string Version => (IsEditor ? "Can't get Version Number in Editor" : PathManager.GetModInfo(Get<ModBundle>().Name).Version) ?? throw new OperationCanceledException($"{nameof(ModBundle.Name)} couldn't be found. Did you spell your Mod name correctly? Refer to this link for more details: https://github.com/Emik03/KeepCoding/wiki/Chapter-2.1:-ModuleScript#version-string");
+        public string Version => (IsEditor ? "Can't get Version Number in Editor" : PathManager.GetModInfo(Get<ModBundle>().Name).Version) ?? throw new OperationCanceledException($"{nameof(ModBundle.Name)} couldn't be found. Did you spell your Mod name correctly? Refer to this link for more details: https://github.com/Emik03/KeepCoding/wiki/Chapter-2.1:-ModuleBase#version-string");
 
         /// <value>
         /// Contains an instance for every <see cref="Sound"/> played by this module using <see cref="PlaySound(Transform, bool, Sound[])"/> or any of its overloads.
@@ -101,7 +101,7 @@ namespace KeepCoding
         /// </summary>
         /// <exception cref="FormatException"></exception>
         /// <exception cref="NullIteratorException"></exception>
-        protected void Awake()
+        protected virtual void Awake()
         {
             _setActive = () =>
             {
@@ -111,7 +111,7 @@ namespace KeepCoding
                 OnActivate();
             };
 
-            _components = new Dictionary<Type, Component[]>() { { typeof(ModuleScript), new[] { this } } };
+            _components = new Dictionary<Type, Component[]>() { { typeof(ModuleBase), new[] { this } } };
 
             _database = new Dictionary<string, Dictionary<string, object>[]>();
 

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace KeepCoding
+namespace KModkit
 {
     /// <summary>
     /// Extension methods surrounding <see cref="Array"/> static methods to make code a bit shorter. Written by Emik.

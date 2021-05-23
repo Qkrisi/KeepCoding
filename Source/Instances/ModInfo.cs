@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Security;
 
-namespace KeepCoding
+namespace KModkit
 {
     /// <summary>
     /// Contains information about the mod's info, this class can be used to deserialize every mod's "modInfo.json".
@@ -12,7 +12,7 @@ namespace KeepCoding
     public sealed class ModInfo
     {
         /// <value>
-        /// Contains the ID of the mod, not to be mistaken with <see cref="ModuleScript.ModuleId"/>.
+        /// Contains the ID of the mod, not to be mistaken with <see cref="ModuleBase.ModuleId"/>.
         /// </value>
         [JsonProperty("id")]
         public string Id { get; private set; }

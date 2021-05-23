@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using static KeepCoding.ComponentPool;
+using static KModkit.ComponentPool;
 using Connection = IRCConnection;
 using KTInfo = Assets.Scripts.Mods.ModInfo;
 using KTInput = KTInputManager;
@@ -8,10 +8,8 @@ using KTMod = ModManager;
 using KTPlayer = Assets.Scripts.Settings.PlayerSettingsManager;
 using KTScene = SceneManager;
 
-namespace KeepCoding
+namespace KModkit
 {
-    extern alias core;
-
     /// <summary>
     /// Allows access into the game's internal code. Written by Emik.
     /// </summary>
@@ -154,15 +152,15 @@ namespace KeepCoding
 
                     foreach (var pool in setting.ComponentPools)
                     {
-                        var types = new List<ComponentTypeEnum>();
+                        var types = new List<ComponentPool.ComponentTypeEnum>();
 
                         foreach (var type in pool.ComponentTypes)
-                            types.Add((ComponentTypeEnum)type);
+                            types.Add((ComponentPool.ComponentTypeEnum)type);
 
                         list.Add(new ComponentPool(
                             pool.Count,
-                            (ComponentSource)pool.AllowedSources,
-                            (SpecialComponentTypeEnum)pool.SpecialComponentType,
+                            (ComponentPool.ComponentSource)pool.AllowedSources,
+                            (ComponentPool.SpecialComponentTypeEnum)pool.SpecialComponentType,
                             pool.ModTypes,
                             types));
                     }

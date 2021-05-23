@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace KeepCoding
+namespace KModkit
 {
     /// <summary>
     /// An exception thrown for when the value isn't handled. Written by Emik.

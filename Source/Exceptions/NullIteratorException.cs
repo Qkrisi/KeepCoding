@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace KeepCoding
+namespace KModkit
 {
     /// <summary>
     /// An exception thrown when the iterator is null. Written by Emik.

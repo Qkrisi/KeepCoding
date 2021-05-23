@@ -8,8 +8,8 @@
 	<Description>KeepCoding is a C# class library by Emik (https://github.com/Emik03) meant to help speed up the process of scripting Keep Talking and Nobody Explodes modules by giving better alternatives to common commands, and automating things universal to module-creation. (such as moduleIds, or logging)</Description>
 	<PackageReleaseNotes></PackageReleaseNotes>
 	<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-	<PackageProjectUrl>https://github.com/Emik03/KeepCoding</PackageProjectUrl>
-	<RepositoryUrl>https://github.com/Emik03/KeepCoding</RepositoryUrl>
+	<PackageProjectUrl>https://github.com/Qkrisi/KeepCoding</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/Qkrisi/KeepCoding</RepositoryUrl>
 	<RepositoryType>GitHub</RepositoryType>
 	<NeutralLanguage>en-150</NeutralLanguage>
 	<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
@@ -21,7 +21,6 @@
 	<PackageId>KeepCoding</PackageId>
 	<SignAssembly>true</SignAssembly>
 	<DelaySign>false</DelaySign>
-	<AssemblyOriginatorKeyFile>KeepCoding.pfx</AssemblyOriginatorKeyFile>
 	<PackageTags>helper library extension dll unity extensions ktane keeptalking ktane-mods modkit keeptalkingandnobodyexplodes</PackageTags>
 	<EnableNETAnalyzers>true</EnableNETAnalyzers>
 	<AnalysisLevel>preview</AnalysisLevel>
@@ -38,45 +37,64 @@
 
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>D:\Steam\steamapps\common\Keep Talking and Nobody Explodes\ktane_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>/home/qkrisi/.steam/steam/steamapps/common/Keep Talking and Nobody Explodes/ktane_Data/Managed/Assembly-CSharp.dll</HintPath>
       <Private>false</Private>
       <Aliases></Aliases>
     </Reference>
     <Reference Include="KMFramework">
-      <HintPath>D:\ktanemodkit-master\Assets\Plugins\Managed\KMFramework.dll</HintPath>
+      <HintPath>/home/qkrisi/.steam/steam/steamapps/common/Keep Talking and Nobody Explodes/ktane_Data/Managed/KMFramework.dll</HintPath>
       <Private>false</Private>
       <Aliases></Aliases>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>D:\ktanemodkit-master\Assets\Plugins\Managed\Newtonsoft.Json.dll</HintPath>
+      <HintPath>/home/qkrisi/.steam/steam/steamapps/common/Keep Talking and Nobody Explodes/ktane_Data/Managed/Newtonsoft.Json.dll</HintPath>
       <Private>false</Private>
       <Aliases></Aliases>
     </Reference>
     <Reference Include="TweaksAssembly">
-      <HintPath>D:\Steam\steamapps\workshop\content\341800\1366808675\TweaksAssembly.dll</HintPath>
+      <HintPath>/home/qkrisi/.steam/steam/steamapps/workshop/content/341800/1366808675/TweaksAssembly.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="TwitchPlaysAssembly">
-      <HintPath>D:\Steam\steamapps\workshop\content\341800\1711408527\TwitchPlaysAssembly.dll</HintPath>
+      <HintPath>/home/qkrisi/.steam/steam/steamapps/workshop/content/341800/1711408527/TwitchPlaysAssembly.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>..\..\..\..\..\Program Files\Editor\Data\Managed\UnityEditor.dll</HintPath>
+      <HintPath>/home/qkrisi/.steam/steam/steamapps/common/Keep Talking and Nobody Explodes/ktane_Data/Managed/UnityEditor.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\..\Program Files\Editor\Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>/home/qkrisi/.steam/steam/steamapps/common/Keep Talking and Nobody Explodes/ktane_Data/Managed/UnityEngine.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\..\..\Program Files\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
-      <Aliases>core</Aliases>
+      <HintPath>/home/qkrisi/.steam/steam/steamapps/common/Keep Talking and Nobody Explodes/ktane_Data/Managed/UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>/home/qkrisi/UnityEditors/2017.4.22f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>/home/qkrisi/.steam/steam/steamapps/common/Keep Talking and Nobody Explodes/ktane_Data/Managed/UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>/home/qkrisi/.steam/steam/steamapps/common/Keep Talking and Nobody Explodes/ktane_Data/Managed/UnityEngine.AudioModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>/home/qkrisi/.steam/steam/steamapps/common/Keep Talking and Nobody Explodes/ktane_Data/Managed/UnityEngine.VideoModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>/home/qkrisi/.steam/steam/steamapps/common/Keep Talking and Nobody Explodes/ktane_Data/Managed/UnityEngine.UnityWebRequestModule.dll</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\Downloads\LICENSE.md">
+    <None Include="LICENSE.md">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
@@ -112,16 +130,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy /y &quot;$(ProjectDir)$(OutDir)KeepCoding.dll&quot;  &quot;D:\Emik's Modules\Assets\Plugins\Managed&quot;&#xD;&#xA;xcopy /y &quot;$(ProjectDir)$(OutDir)KeepCoding.xml&quot; &quot;D:\Emik's Modules\Assets\Plugins\Managed&quot;&#xD;&#xA;" />
-	<GetAssemblyIdentity AssemblyFiles="$(TargetPath)">
-      <Output TaskParameter="Assemblies" ItemName="Targets" />
-    </GetAssemblyIdentity>
-    <ItemGroup>
-      <VersionNumber Include="$([System.Text.RegularExpressions.Regex]::Replace(&quot;%(Targets.Version)&quot;, &quot;^(.+?)(\.0+)$&quot;, &quot;$1&quot;))" />
-    </ItemGroup>
-  </Target>
 
   <ItemGroup>
     <Reference Update="System">

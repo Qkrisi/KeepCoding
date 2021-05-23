@@ -3,7 +3,7 @@ using System.Collections;
 using System.Linq;
 using UnityEngine;
 
-namespace KeepCoding
+namespace KModkit
 {
     /// <summary>
     /// Advanced audio handler. Written by Emik.

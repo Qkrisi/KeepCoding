@@ -2,7 +2,7 @@
 using System.Threading;
 using UnityEngine;
 
-namespace KeepCoding
+namespace KModkit
 {
     /// <summary>
     /// Abstract class for the <see cref="Work"/> datatype, since the different overloads are similar to each other. Written by Emik.

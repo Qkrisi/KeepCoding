@@ -5,13 +5,13 @@ using System.IO;
 using System.Text.RegularExpressions;
 using UnityEngine;
 
-namespace KeepCoding
+namespace KModkit
 {
     /// <summary>
     /// Base class for TwitchPlays support for solvable and needy modded modules in Keep Talking and Nobody Explodes. Written by Emik.
     /// </summary>
-    [RequireComponent(typeof(ModuleScript))]
-    public abstract class TPScript<TModule> : MonoBehaviour, ITP where TModule : ModuleScript
+    [RequireComponent(typeof(ModuleBase))]
+    public abstract class TPScript<TModule> : MonoBehaviour, ITP where TModule : ModuleBase
     {
         /// <summary>
         /// The help message that gets sent when typing <c>!{0} help</c>.
@@ -95,7 +95,7 @@ namespace KeepCoding
         /// <value>
         /// The instance of the module.
         /// </value>
-        public TModule Module => _module ??= GetComponent<TModule>() ?? throw new MissingComponentException("TPScript cannot find your ModuleScript. Make sure that both script files are in the same game object!");
+        public TModule Module => _module ??= GetComponent<TModule>() ?? throw new MissingComponentException("TPScript cannot find your ModuleBase. Make sure that both script files are in the same game object!");
         private TModule _module;
 
         /// <value>
@@ -280,7 +280,7 @@ namespace KeepCoding
         protected static object Evaluate<T>(bool condition, T then, object otherwise = null) => condition ? then : otherwise;
 
         /// <summary>
-        /// Presses a sequence of buttons according to <paramref name="indices"/> within <paramref name="selectables"/>, waiting <paramref name="wait"/> seconds in-between each, and interrupting as soon as <see cref="ModuleScript.HasStruck"/> is true.
+        /// Presses a sequence of buttons according to <paramref name="indices"/> within <paramref name="selectables"/>, waiting <paramref name="wait"/> seconds in-between each, and interrupting as soon as <see cref="ModuleBase.HasStruck"/> is true.
         /// </summary>
         /// <param name="selectables">The array of selectables to interact with.</param>
         /// <param name="indices">The indices to press within the array.</param>

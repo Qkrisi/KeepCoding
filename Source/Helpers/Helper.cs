@@ -9,7 +9,7 @@ using System.Text;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace KeepCoding
+namespace KModkit
 {
     /// <summary>
     /// General extension class covering both KMFramework and native datatypes. Written by Emik.
