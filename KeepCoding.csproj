@@ -36,11 +36,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>/home/qkrisi/.steam/steam/steamapps/common/Keep Talking and Nobody Explodes/ktane_Data/Managed/Assembly-CSharp.dll</HintPath>
-      <Private>false</Private>
-      <Aliases></Aliases>
-    </Reference>
     <Reference Include="KMFramework">
       <HintPath>/home/qkrisi/.steam/steam/steamapps/common/Keep Talking and Nobody Explodes/ktane_Data/Managed/KMFramework.dll</HintPath>
       <Private>false</Private>
@@ -50,14 +45,6 @@
       <HintPath>/home/qkrisi/.steam/steam/steamapps/common/Keep Talking and Nobody Explodes/ktane_Data/Managed/Newtonsoft.Json.dll</HintPath>
       <Private>false</Private>
       <Aliases></Aliases>
-    </Reference>
-    <Reference Include="TweaksAssembly">
-      <HintPath>/home/qkrisi/.steam/steam/steamapps/workshop/content/341800/1366808675/TweaksAssembly.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="TwitchPlaysAssembly">
-      <HintPath>/home/qkrisi/.steam/steam/steamapps/workshop/content/341800/1711408527/TwitchPlaysAssembly.dll</HintPath>
-      <Private>false</Private>
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>/home/qkrisi/.steam/steam/steamapps/common/Keep Talking and Nobody Explodes/ktane_Data/Managed/UnityEditor.dll</HintPath>
